@@ -1,0 +1,10 @@
+
+Classes : Classes are blueprint of objects , A Class can have many objects ,
+because Class is a Templete and Object are instance of class or concrete 
+implementation of class .
+
+Note : JavaScript is a prototype based object orient language , which means 
+id doesn't have classes rather it define behaviour using constructor functon 
+and then reuse it using the prototype 
+
+
