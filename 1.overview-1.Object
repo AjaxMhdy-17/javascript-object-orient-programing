@@ -1,0 +1,70 @@
+
+in this article we would explore some of the Object Oriented 
+mechanisms supported by JavaScript 
+
+There are certain features or mechanisms which makes a Language
+Object-Oriented like
+
+1.Object
+2.Classes 
+3.Encapsulation
+4.Inheritance 
+
+1. Object: Object is a unique entity that contain property and methods 
+
+for Example "Car" is can be said a real life Object , which has 
+some characturistics like Color , Type , Model , HorsePower and certain 
+action like Drive , Accelarate , TurnRight , TurnLeft , Break , etc.
+
+This characturistic of an Object Called Property and Actions are Called Method
+An Object is a Instance of Class , Function , Array , String , almost Every 
+element in Javascript is Object .
+
+Note : A METHOD IS JAVASCRIPT IS A PROPERTY OF AN OBJECT , WHOSE TYPE OF VALUE IS A FUNCTION
+
+
+****Making Object******
+
+#using Object Literal 
+
+const person = {
+  
+  first_name : 'mhdy' , ///property 
+  last_name : 'hasan'  ///property 
+  , 
+  getFunction : function(){ /// action also a property type function 
+
+    return (`first name : ${this.first_name} and last name : ${this.last_name}`)
+  }
+  ,
+  phone : { ///nested object 
+    mobile : '1234' , 
+    land_phone : '8765' , 
+  }
+}
+
+//printing Object
+console.log(person)
+console.log('\n')
+console.log(person.first_name)
+console.log(person.getFunction())
+console.log(person.phone)
+console.log(person.phone.mobile)
+console.log(person.phone.land_phone)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
