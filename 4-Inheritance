@@ -1,0 +1,43 @@
+
+///inheritance : it is a concept in which some property and methods of 
+///an Object is being used by another Object . unlike most of the OOP language 
+///where classes inherit classes  , but in javascript object inherit object 
+
+
+/// certain features like property and methods of one object reused by other 
+///objects is called inheritance .
+
+
+class person{
+  constructor(name){
+    this.name = name 
+  }
+  toString(){
+    return (`Name of person ${this.name}`)
+  }
+}
+
+
+// const p = new person('mhdy')
+
+// console.log(p.toString())
+
+
+class student extends person{
+  constructor(name , id){
+      /// super keyword getting value of 'name' from parent object 
+    super(name) 
+    this.id = id 
+  }
+  toString(){ //method overriding ///same name method doing different type in inherited / child class / 
+    return (`${super.toString()} , Student Id : ${this.id}`) 
+  }
+}
+
+
+let stu = new student('mhdy',25)
+let stupid = new student('creative' , 83) 
+
+console.log(stu.toString())
+console.log(stupid.toString())
+
