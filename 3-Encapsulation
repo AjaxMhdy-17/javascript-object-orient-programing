@@ -1,1 +1,51 @@
 
+
+// En(one unit)-capsulation(Wrapping)
+
+// Encapsulation : The Process of Wrapping Property and function in a Single Unit 
+// is known as Encapsulation
+
+
+// class Person{
+//   constructor(name , id){
+//     this.name = name ;
+//     this.id = id ;
+//   }
+//   add_Address(address){
+//     this.address = address ;
+//   }
+//   getDetails(){
+//     console.log(`Name is ${this.name} and address is ${this.address}`)
+//   }
+// }
+
+
+// let person1 = new Person("Mhdy" , 25)
+// person1.add_Address("Madina")
+
+// person1.getDetails()
+
+
+///Sometimes encapsulation refers to hiding of data or data abstruction
+///which means representing essentail features hiding the background detail.
+
+// encapsulation -> representing essential features and hiding background details 
+
+function person(fname , lname){
+  
+  let fristName = fname ;
+  let lastName = lname  ;
+
+  let getDetails_noaccess = function (){
+    return(`First name is : ${fristName} And Last Name is : ${lastName}`)
+  }
+
+  this.getDetails_in_abstruct_access = function(){
+    return(`Inside Abastruct Function -> First Name is : ${fristName} and Last Name is : ${lastName}`) 
+  }
+
+}
+
+let person1 = new person('mhdy','hasan') ;
+console.log(person1.getDetails_noaccess)
+console.log(person1.getDetails_in_abstruct_access())
