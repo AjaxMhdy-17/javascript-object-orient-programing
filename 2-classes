@@ -8,3 +8,73 @@ id doesn't have classes rather it define behaviour using constructor functon
 and then reuse it using the prototype 
 
 
+///here we writing some code as a class 
+/// class Vehicle has a contructor ,  
+/// some property like name , maker , engine 
+/// and a method getDetails() 
+///constructor method setting the value of property which is given by object or blue print of class Vehicle
+/// and we reusing same code whenever we want by creating object of this 
+/// class and set value of property dynamically using constructor method
+/// and displaying value of property using getDetails() method .
+/// is n't awesome ? we reusing same code how many time we want .
+
+
+class Vehicle {
+
+  // constructor(name , maker , engine){
+  //   this.name = name ;
+  //   this.maker = maker ;
+  //   this.engine = engine ;
+  // }
+
+  setDetails(name , maker , engine){
+    this.name = name ;
+    this.maker = maker ;
+    this.engine = engine ;
+  }
+
+  getDetails() {
+    return (`the name is : ${this.name} maker : ${this.maker}  engine : ${this.engine}`) 
+  }
+
+}
+
+//here creating blueprint and we setting value using contructor
+// let bike1 = new Vehicle('AK47' , "BMW" , "BMW-Wing:75")
+// console.log(bike1) 
+// bike1.getDetails()
+
+// let bike2 = new Vehicle('Pd69' , "toyot" ,"toyota-Fire:83" )
+// console.log(bike2)
+// bike2.getDetails()
+
+
+
+///now we will setting values using setter method named setDetails() 
+
+///creating blue print 
+// let bike3 = new Vehicle()
+// bike3.setDetails('AK47' , "BMW" , "BMW-Wing:75") 
+// console.log(bike3.getDetails())
+
+
+
+
+////****Tradional way write class and object ***////
+
+function Car(name , maker , engine){
+  this.name = name ; ///property 
+  this.maker = maker ;
+  this.engine = engine ;
+}
+
+
+///now we want to add some method in Car to controll the properties of Car
+
+Car.prototype.getDetails = function (){
+  console.log(`name : ${this.name} , maker : ${this.maker} , engine : ${this.engine}`)
+}
+
+let car1 = new Car('Tesla-17', "Tesla" , "Tesla-Air : 77") 
+car1.getDetails() 
+
